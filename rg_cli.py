@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 def hello():
     print("Hello PyCon APAC 2022")
 

@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 import click
-import spreadsheetX
 
-@click.option
-def load_slide():
-    load.open("michelle_slide_template.ppt")
-    print("Hello PyCon APAC 2022")
 
-@click.option
-def fill_in_slide_data():
-    fill("asdf.ppt")
+@click.command()
+@click.argument("slide_template")
+def load_slide(slide_template):
+    click.echo(slide_template)
 
 if __name__ == '__main__':
-    hello()
+    load_slide()

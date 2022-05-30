@@ -14,9 +14,6 @@ slide = prs.slides.add_slide(title_slide_layout)
 #設定第一張簡報的標題 
 title = slide.shapes.title
 title.text = "Hello Python PPT"
-#將簡報物件存檔
-
-
 
 def add_slide(prs, layout,img):
 	slide = prs.slides.add_slide(layout)
@@ -36,23 +33,19 @@ def add_slide(prs, layout,img):
 	p.text = '分別有 A、B、C 三種品牌的銷售量'
 	p.level = 1
 
-
 	# show the figure
 	left = Inches(3)
 	height = Inches(4.5)
 	left = top = Inches(3)
 	pic = slide.shapes.add_picture(img, left, top, height=height)
 
-	
 	return slide
-
 
 x_labels = ['A','B','C']
 sales_num = [120,90,60]
 plt.bar(x_labels,sales_num)
 plt.savefig('graph.jpg')
 img = 'graph.jpg'
-
 
 title_slide_layout = prs.slide_layouts[1]
 slide = add_slide(prs, title_slide_layout ,img)
